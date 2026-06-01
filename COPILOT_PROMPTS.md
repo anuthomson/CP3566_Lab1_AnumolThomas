@@ -89,3 +89,28 @@ Yes
 
 VERDICT:
 Added the SQL query as a class constant and kept it separate from the execution code.
+## Prompt 5
+
+The query is executing successfully and I now have a ResultSet.
+
+Please help me read the rows using a while loop.
+
+Show how to retrieve:
+
+* id
+* name
+* program
+* gpa
+
+Do not worry about the final output formatting yet.
+
+Keep the changes small and explain briefly what rs.next(), getInt(), getString(), and getDouble() do.
+
+WHEN:
+Task 1 - Reading rows from ResultSet.
+
+ACCEPTED:
+Yes
+
+VERDICT:
+Added a while loop and retrieved id, name, program, and gpa from the ResultSet.

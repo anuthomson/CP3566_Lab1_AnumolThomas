@@ -24,12 +24,19 @@ public class ListStudents {
 
     try (ResultSet rs = stmt.executeQuery(SQL)) {
 
-        System.out.println("Database connection successful!");
+        while (rs.next()) {
+            int id = rs.getInt("id");
+            String name = rs.getString("name");
+            String program = rs.getString("program");
+            double gpa = rs.getDouble("gpa");
+
+            System.out.println(id + " | " + name + " | " + program + " | " + gpa);
+        }
 
     }
 
-} catch (SQLException e) {
+    } catch (SQLException e) {
     System.err.println("Connection failed: " + e.getMessage());
-}
+    }
     }
 }

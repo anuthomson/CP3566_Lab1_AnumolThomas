@@ -2,6 +2,7 @@ import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -17,11 +18,18 @@ public class ListStudents {
         DriverManager.setLoginTimeout(5);
 
         try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
-             Statement stmt = conn.createStatement()) {
-            stmt.setQueryTimeout(10);
-            System.out.println("Database connection successful!");
-        } catch (SQLException e) {
-            System.err.println("Connection failed: " + e.getMessage());
-        }
+     Statement stmt = conn.createStatement()) {
+
+    stmt.setQueryTimeout(10);
+
+    try (ResultSet rs = stmt.executeQuery(SQL)) {
+
+        System.out.println("Database connection successful!");
+
+    }
+
+} catch (SQLException e) {
+    System.err.println("Connection failed: " + e.getMessage());
+}
     }
 }

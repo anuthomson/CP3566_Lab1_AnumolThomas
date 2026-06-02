@@ -114,3 +114,25 @@ Yes
 
 VERDICT:
 Added a while loop and retrieved id, name, program, and gpa from the ResultSet.
+
+## Prompt 6
+
+I am starting FindStudent.java.
+
+Please help me create the basic setup with:
+
+* class structure
+* database constants
+* UTF-8 output
+* login timeout
+
+No SQL yet.
+
+WHEN:
+Starting FindStudent.java
+
+ACCEPTED:
+Yes
+
+VERDICT:
+Created the basic setup successfully.

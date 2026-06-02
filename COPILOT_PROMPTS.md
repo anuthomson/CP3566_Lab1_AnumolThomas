@@ -179,3 +179,17 @@ Yes
 
 VERDICT:
 Added database connection using try-with-resources and DriverManager.getConnection.
+## Prompt 10
+
+Create a PreparedStatement using the existing SQL constant.
+
+Set the student ID parameter using the command-line argument.
+
+WHEN:
+PreparedStatement setup
+
+ACCEPTED:
+Pending
+
+VERDICT:
+Waiting for Copilot response.

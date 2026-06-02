@@ -4,6 +4,7 @@ import java.sql.DriverManager;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 public class FindStudent {
     private static final String URL = "jdbc:h2:./data/studentdb;MODE=MySQL;DATABASE_TO_LOWER=TRUE";
@@ -26,7 +27,8 @@ public class FindStudent {
             int id = Integer.parseInt(studentId);
             PreparedStatement pstmt = conn.prepareStatement(SQL);
             pstmt.setInt(1, id);
-            System.out.println("PreparedStatement created and parameter bound for studentId=" + studentId);
+            ResultSet rs = pstmt.executeQuery();
+            System.out.println("Query executed; ResultSet captured for studentId=" + studentId);
         } catch (SQLException e) {
             System.err.println("Connection failed: " + e.getMessage());
         } catch (NumberFormatException e) {

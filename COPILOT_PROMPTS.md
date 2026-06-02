@@ -193,3 +193,25 @@ Pending
 
 VERDICT:
 Waiting for Copilot response.
+
+## Prompt 11
+
+Check whether a student was found in the ResultSet.
+
+If a row exists, retrieve:
+
+* id
+* name
+* program
+* gpa
+
+If no row exists, display a message.
+
+WHEN:
+Process ResultSet
+
+ACCEPTED:
+Yes
+
+VERDICT:
+Retrieved and displayed student information from the ResultSet and handled the case where no student is found.

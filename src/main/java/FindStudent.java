@@ -28,7 +28,17 @@ public class FindStudent {
             PreparedStatement pstmt = conn.prepareStatement(SQL);
             pstmt.setInt(1, id);
             ResultSet rs = pstmt.executeQuery();
-            System.out.println("Query executed; ResultSet captured for studentId=" + studentId);
+
+            if (rs.next()) {
+                int resId = rs.getInt("id");
+                String name = rs.getString("name");
+                String program = rs.getString("program");
+                double gpa = rs.getDouble("gpa");
+
+                System.out.println("Student found: " + resId + " | " + name + " | " + program + " | " + gpa);
+            } else {
+                System.out.println("No student found with ID: " + studentId);
+            }
         } catch (SQLException e) {
             System.err.println("Connection failed: " + e.getMessage());
         } catch (NumberFormatException e) {

@@ -150,3 +150,32 @@ Yes
 
 VERDICT:
 Added command-line argument validation and usage message.
+
+
+## Prompt 8
+
+To add the SQL query for finding a student by ID.
+
+Use a parameter placeholder (?) because I will use a PreparedStatement.
+
+WHEN:
+SQL query setup
+
+ACCEPTED:
+Yes
+
+VERDICT:
+Added SQL constant with a parameter placeholder for PreparedStatement.
+
+## Prompt 9
+
+To add the database connection using try-with-resources and DriverManager.getConnection.
+
+WHEN:
+Database connection
+
+ACCEPTED:
+Yes
+
+VERDICT:
+Added database connection using try-with-resources and DriverManager.getConnection.

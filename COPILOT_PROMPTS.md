@@ -136,3 +136,17 @@ Yes
 
 VERDICT:
 Created the basic setup successfully.
+check that a student ID was provided as a command-line argument.
+
+If no ID is provided, display a usage message and exit.
+
+No database code yet.
+
+WHEN:
+Argument validation
+
+ACCEPTED:
+Yes
+
+VERDICT:
+Added command-line argument validation and usage message.

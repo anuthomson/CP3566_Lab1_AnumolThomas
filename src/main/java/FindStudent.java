@@ -12,6 +12,12 @@ public class FindStudent {
         System.setErr(new PrintStream(System.err, true, StandardCharsets.UTF_8));
         DriverManager.setLoginTimeout(5);
 
-        System.out.println("FindStudent ready.");
+        if (args.length < 1) {
+            System.err.println("Usage: java FindStudent <student-id>");
+            return;
+        }
+
+        String studentId = args[0];
+        System.out.println("FindStudent ready. studentId=" + studentId);
     }
 }

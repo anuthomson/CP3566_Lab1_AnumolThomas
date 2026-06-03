@@ -732,4 +732,22 @@ Yes
 
 VERDICT:
 Added a parameterized SQL query using a placeholder for safe searching.
+## Prompt 40
+
+Add command-line argument validation.
+
+Require one search value.
+
+Display a usage message if the search value is missing.
+
+Store the search value in a variable.
+
+WHEN:
+Argument validation
+
+ACCEPTED:
+Yes
+
+VERDICT:
+Added argument validation and stored the search value.
 

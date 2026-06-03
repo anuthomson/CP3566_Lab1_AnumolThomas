@@ -490,3 +490,48 @@ Yes
 
 VERDICT:
 Added command-line argument validation and usage message.
+
+## Prompt 27
+
+Validate the student id and GPA values.
+
+The id must be a positive integer.
+The GPA must be between 0.00 and 4.00.
+
+WHEN:
+Input value validation
+
+ACCEPTED:
+Yes
+
+VERDICT:
+Added validation for positive student id and GPA range.
+
+## Prompt 28
+
+Add database connection and PreparedStatement for UpdateGpa.
+
+Bind GPA first and student id second.
+Set query timeout to 10 seconds.
+
+WHEN:
+Database update setup
+
+ACCEPTED:
+Yes
+
+VERDICT:
+Added connection, PreparedStatement, parameter binding, and query timeout.
+
+## Prompt 29
+
+Execute the update statement and store the row count.
+
+WHEN:
+Execute update
+
+ACCEPTED:
+Yes
+
+VERDICT:
+Used executeUpdate() and stored the number of affected rows.

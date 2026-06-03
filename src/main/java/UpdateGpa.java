@@ -59,9 +59,9 @@ public class UpdateGpa {
 
             int rowsAffected = pstmt.executeUpdate();
             if (rowsAffected == 1) {
-                System.out.println("Updated student #" + studentId + " · GPA set to " + gpa + " · 1 row changed");
+                System.out.println("Updated student #" + studentId + " - GPA set to " + gpa + " - 1 row changed");
             } else if (rowsAffected == 0) {
-                System.out.println("No update · no student with id " + studentId + " · 0 rows changed");
+                System.out.println("No update - no student with id " + studentId + " - 0 rows changed");
             }
         } catch (SQLException e) {
             System.err.println("Connection failed: " + e.getMessage());

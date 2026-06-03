@@ -453,3 +453,40 @@ Yes
 
 VERDICT:
 Created the basic UpdateGpa.java setup.
+
+## Prompt 25
+
+Add the SQL UPDATE statement as a constant.
+
+The statement should update a student's GPA by ID.
+
+Use parameter placeholders (?).
+
+WHEN:
+SQL setup
+
+ACCEPTED:
+Yes
+
+VERDICT:
+Added the SQL UPDATE statement using parameter placeholders.
+
+## Prompt 26
+
+Add command-line argument validation.
+
+The program should require:
+
+* student id
+* new gpa
+
+Display a usage message if arguments are missing.
+
+WHEN:
+Argument validation
+
+ACCEPTED:
+Yes
+
+VERDICT:
+Added command-line argument validation and usage message.

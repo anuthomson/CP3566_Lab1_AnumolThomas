@@ -434,3 +434,22 @@ Yes
 
 VERDICT:
 Retrieved and displayed the generated student ID after a successful INSERT.
+## Prompt 24
+
+ UpdateGpa.java.
+
+ create only the basic setup:
+
+* class structure
+* database constants
+* UTF-8 output
+* login timeout
+
+WHEN:
+Starting UpdateGpa.java
+
+ACCEPTED:
+Yes
+
+VERDICT:
+Created the basic UpdateGpa.java setup.

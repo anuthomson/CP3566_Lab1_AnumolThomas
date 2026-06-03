@@ -338,7 +338,7 @@ Validate the GPA input.
 
 Convert the GPA value to a double.
 
-Reject values outside the range 0.00 to 4.33.
+Reject values outside the range 0.00 to 4.00.
 
 Handle invalid number input.
 
@@ -350,3 +350,87 @@ Yes
 
 VERDICT:
 Added GPA parsing and validation, including range checking and invalid number handling.
+## Prompt 19
+
+Add the database connection using try-with-resources.
+
+Use DriverManager.getConnection with the existing constants.
+
+WHEN:
+Database connection
+
+ACCEPTED:
+Yes
+
+VERDICT:
+Added database connection using try-with-resources.
+## Prompt 20
+
+Create a PreparedStatement for the INSERT SQL.
+
+Use Statement.RETURN_GENERATED_KEYS.
+
+Bind:
+
+* name
+* program
+* gpa
+
+Do not execute the insert yet.
+
+WHEN:
+PreparedStatement setup
+
+ACCEPTED:
+Yes
+
+VERDICT:
+Created the PreparedStatement and bound the input values.
+## Prompt 21
+
+Execute the INSERT statement.
+
+Store the number of affected rows.
+
+Do not retrieve the generated key yet.
+
+WHEN:
+Execute insert
+
+ACCEPTED:
+Yes
+
+VERDICT:
+Executed the INSERT statement and stored the affected row count.
+
+## Prompt 22
+
+Add setQueryTimeout(10) to the PreparedStatement before executeUpdate.
+
+Keep the rest of the code the same.
+
+WHEN:
+Query timeout
+
+ACCEPTED:
+Yes
+
+VERDICT:
+Added a 10-second query timeout before executing the INSERT statement.
+
+## Prompt 23
+
+Retrieve the generated student ID after a successful INSERT.
+
+Use getGeneratedKeys().
+
+Display the new student ID.
+
+WHEN:
+Generated key retrieval
+
+ACCEPTED:
+Yes
+
+VERDICT:
+Retrieved and displayed the generated student ID after a successful INSERT.

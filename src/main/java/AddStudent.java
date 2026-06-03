@@ -2,7 +2,9 @@ import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.regex.Pattern;
 
 public class AddStudent {
@@ -54,8 +56,23 @@ public class AddStudent {
 
         DriverManager.setLoginTimeout(5);
 
-        try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD)) {
-            // Connection established and ready for SQL execution.
+        try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
+             PreparedStatement pstmt = conn.prepareStatement(SQL, Statement.RETURN_GENERATED_KEYS)) {
+
+            pstmt.setString(1, name);
+            pstmt.setString(2, program);
+            pstmt.setDouble(3, gpa);
+            pstmt.setQueryTimeout(10);
+
+            int rowsAffected = pstmt.executeUpdate();
+            System.out.println("Rows affected: " + rowsAffected);
+
+            try (var keys = pstmt.getGeneratedKeys()) {
+                if (keys.next()) {
+                    int studentId = keys.getInt(1);
+                    System.out.println("New student ID: " + studentId);
+                }
+            }
         } catch (SQLException e) {
             System.err.println("Connection failed: " + e.getMessage());
         }

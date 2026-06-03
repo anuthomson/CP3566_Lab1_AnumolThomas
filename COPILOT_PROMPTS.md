@@ -535,3 +535,143 @@ Yes
 
 VERDICT:
 Used executeUpdate() and stored the number of affected rows.
+
+## Prompt 30
+
+Use rowsAffected to display the update result.
+
+If one row was updated, display a success message.
+
+If no rows were updated, display a not-found message.
+
+WHEN:
+Update result handling
+
+ACCEPTED:
+Yes
+
+VERDICT:
+Added success and not-found messages based on rowsAffected.
+
+## Prompt 31
+
+create
+
+SearchUnsafe.java.
+
+Please create only the basic setup:
+
+* class structure
+* database constants
+* UTF-8 output
+* login timeout
+
+Do not add SQL yet.
+
+Keep it small.
+
+WHEN:
+Starting SearchUnsafe.java
+
+ACCEPTED:
+Yes
+
+VERDICT:
+Created the basic SearchUnsafe.java setup.
+
+## Prompt 32
+
+Add the SQL query as a constant.
+
+The query should search students by name.
+
+Do not use PreparedStatement.
+
+This program is intentionally unsafe.
+
+WHEN:
+SQL setup
+
+ACCEPTED:
+Yes
+
+VERDICT:
+Added the SQL query constant for name searching.
+
+
+## Prompt 33
+
+Add database connection and Statement using try-with-resources.
+
+Use DriverManager.getConnection with the existing constants.
+
+Use Statement, not PreparedStatement.
+
+Set query timeout to 10 seconds.
+
+Do not execute the query yet.
+
+WHEN:
+SearchUnsafe database setup
+
+ACCEPTED:
+Yes
+
+VERDICT:
+Added database connection, Statement, and query timeout.
+
+## Prompt 34
+
+Add database connection and Statement using try-with-resources.
+
+Use DriverManager.getConnection with the existing constants.
+
+Use Statement, not PreparedStatement.
+
+Set query timeout to 10 seconds.
+
+Do not execute the query yet.
+
+WHEN:
+SearchUnsafe database setup
+
+ACCEPTED:
+Yes
+
+VERDICT:
+Added database connection, Statement, and query timeout.
+
+
+
+## Prompt 35
+
+Build the unsafe SQL query by replacing SEARCH with the user input.
+
+Store the final SQL in a String variable.
+
+Display the final SQL statement.
+
+Do not execute it yet.
+
+WHEN:
+Unsafe SQL construction
+
+ACCEPTED:
+Yes
+
+VERDICT:
+Built the unsafe SQL statement and displayed the final query.
+## Prompt 36
+
+Execute the unsafe SQL query using Statement.executeQuery().
+
+Store the ResultSet.
+
+WHEN:
+Execute unsafe query
+
+ACCEPTED:
+Yes
+
+VERDICT:
+Executed the unsafe query and stored the ResultSet.

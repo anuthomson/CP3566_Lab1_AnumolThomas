@@ -1,6 +1,8 @@
 import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
+import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.regex.Pattern;
 
 public class AddStudent {
@@ -45,11 +47,17 @@ public class AddStudent {
             return;
         }
 
-        if (gpa < 0.00 || gpa > 4.33) {
-            System.err.println("Invalid GPA: must be between 0.00 and 4.33.");
+        if (gpa < 0.00 || gpa > 4.00) {
+            System.err.println("Invalid GPA: must be between 0.00 and 4.00.");
             return;
         }
 
         DriverManager.setLoginTimeout(5);
+
+        try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD)) {
+            // Connection established and ready for SQL execution.
+        } catch (SQLException e) {
+            System.err.println("Connection failed: " + e.getMessage());
+        }
     }
 }

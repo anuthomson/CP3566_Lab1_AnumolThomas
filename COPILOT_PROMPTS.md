@@ -675,3 +675,61 @@ Yes
 
 VERDICT:
 Executed the unsafe query and stored the ResultSet.
+## Prompt 37
+
+Display the search results from the ResultSet.
+
+Show:
+id | name | program | gpa
+
+Loop through all matching rows.
+
+WHEN:
+Display search results
+
+ACCEPTED:
+Yes
+
+VERDICT:
+Displayed all matching rows from the unsafe search ResultSet.
+
+## Prompt 38
+
+Create SearchSafe.java.
+
+Please create the basic setup:
+
+* class structure
+* database constants
+* UTF-8 output
+* login timeout
+
+
+WHEN:
+Starting SearchSafe.java
+
+ACCEPTED:
+Yes
+
+VERDICT:
+Created the basic SearchSafe.java setup.
+
+## Prompt 39
+
+Add the SQL query as a constant.
+
+The query should search students by name.
+
+Use a parameter placeholder (?).
+
+This version must be safe for SQL injection.
+
+WHEN:
+SQL setup
+
+ACCEPTED:
+Yes
+
+VERDICT:
+Added a parameterized SQL query using a placeholder for safe searching.
+

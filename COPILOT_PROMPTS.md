@@ -750,4 +750,43 @@ Yes
 
 VERDICT:
 Added argument validation and stored the search value.
+## Prompt 41
+
+Add database connection and PreparedStatement using try-with-resources.
+
+Use the SQL constant.
+
+Bind the search value using a parameter.
+
+Set query timeout to 10 seconds.
+
+Do not execute the query yet.
+
+WHEN:
+Safe query preparation
+
+ACCEPTED:
+Yes
+
+VERDICT:
+Added database connection, PreparedStatement, parameter binding, and query timeout.
+
+## Prompt 42
+
+Execute the PreparedStatement using executeQuery().
+
+Store the ResultSet.
+
+Display all matching rows in this format:
+
+id | name | program | gpa
+
+WHEN:
+Execute safe query and display results
+
+ACCEPTED:
+Yes
+
+VERDICT:
+Executed the PreparedStatement and displayed matching rows from the ResultSet.
 
